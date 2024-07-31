@@ -1,27 +1,30 @@
 //this code is for the typing effect you see on the hero of homepage.
 document.addEventListener('DOMContentLoaded', function() {
-    const textElement = document.getElementById('typing-effect');
-    const text = textElement.innerText;
-    textElement.innerText = ' '; // Clear the initial text
-  
-    let index = 0;
-    const speed = 70; // Adjust typing speed (milliseconds per character)
-  
-    function type() {
+  const textElement = document.getElementById('typing-effect');
+  const text = textElement.innerText;
+  textElement.innerText = ' '; // Clear the initial text
+
+  let index = 0;
+  const speed = 70; // Adjust typing speed (milliseconds per character)
+  const delay = 6000; // Delay before restarting typing effect (10 seconds)
+
+  function type() {
       if (index < text.length) {
-        textElement.innerText += text.charAt(index );
-        index++;
-        setTimeout(type, speed);
+          textElement.innerText += text.charAt(index);
+          index++;
+          setTimeout(type, speed);
+      } else {
+          // Reset index and text after typing is complete
+          setTimeout(function() {
+              textElement.innerText = ' '; // Clear the text
+              index = 0; // Reset index
+              type(); // Restart typing effect
+          }, delay);
       }
-    }
-  
-    type();
-  });
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    const header = document.getElementById('fade-in-header');
-    header.style.opacity = 1;
-  });
+  }
+
+  type();
+});
 //this code is for gallery section.
 document.addEventListener('DOMContentLoaded', () => {
   const galleryItems = document.querySelectorAll('.gallery-item');
