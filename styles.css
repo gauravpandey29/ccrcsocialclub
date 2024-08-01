@@ -59,35 +59,57 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 10px 15px rgba(13, 107, 207, 0.434);
     
 }
 
 
 .hero h1 {
+    font-family: sans-serif;
     position: absolute;
     text-align: center;
     font-size: 3em;
 margin-top: 40px;
 padding-bottom: 100px;
-/* opacity: 0; */
-/* transition: opacity 1s ease-in-out; */
-
+overflow: hidden;
+text-shadow: 2px 2px 4px rgba(226, 222, 222, 0.745);
 }
-
 .hero p {
     font-size: 1.5em;
 position: absolute;
 margin-top: 180px;    
 text-align: center;
 margin-left: 180px;
+}
+@keyframes moveShadow {
+    0% {
+        text-shadow: 1px 1px 4px rgba(239, 239, 239, 0.789);
+    }
+    50% {
+        text-shadow: 4px 4px 4px rgba(7, 104, 239, 0.749);
+    }
+    100% {
+        text-shadow: 7px 7px 4px rgb(14, 101, 213);
+    }
+    
+}
 
+#mainText {
+    font-family: sans-serif;
+    position: absolute;
+    text-align: center;
+    font-size: 3em;
+margin-top: 40px;
+padding-bottom: 100px;
+overflow: hidden;
+text-shadow: 2px 2px 4px rgb(226, 222, 222);    animation: moveShadow 8s infinite; /* Animation with a duration of 2 seconds */
 }
 
 /* This is the css effect for about us page  */
 .about-us {
     background-color: white;
     padding: 4rem 1.5rem;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px rgba(17, 108, 220, 0.794);
     margin: 0;
 }
 
@@ -123,7 +145,7 @@ margin-left: 180px;
 
 .image img {
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(159, 184, 225, 0.963);
     width: 100%;
     max-width: 700px;
     height: 350px;
@@ -165,8 +187,11 @@ margin-left: 180px;
 
 /* gallery section  */
 .gallery {
+    background-color: #f2f2f3e9;
     text-align: center;
     padding: 20px;
+    box-shadow: 0 10px 15px rgba(86, 156, 232, 0.568);
+
 }
 
 .gallery h1 {
@@ -284,6 +309,13 @@ object-fit: cover;
     background-color: #0056b3; /* Darker blue on hover */
     border-color: #004085; /* Darker border color on hover */
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.7); /* Glowing effect */
+}
+#ourTeam{
+    background-color: #e0e8f0e9;
+    padding-bottom: 15px;
+    margin-top: -30px;
+    box-shadow: 0 10px 15px rgba(86, 156, 232, 0.568);
+
 }
 .contact-us {
     background: linear-gradient(to right, grey, creamy);

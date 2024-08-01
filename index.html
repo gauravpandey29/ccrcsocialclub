@@ -14,9 +14,9 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
                     <li><a href="#about-us">About Us</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#ourTeam">Our Team</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
@@ -27,7 +27,7 @@
     
 <section id="home" class="hero">
     <div class="container">
-        <h1 id="fade-in-header">Welcome to CCRC Social Club</h1> 
+     <h1 id="mainText">Welcome to CCRC Social Club</h1> 
         <br><br> <br>
         <p id="typing-effect">-Let's &nbsp; make &nbsp; difference &nbsp; together. &nbsp;</p>
         
@@ -62,7 +62,7 @@
 <!-- End of about-us section  -->
 
 <!-- Gallery section  -->
-<section class="gallery">
+<section id="gallery" class="gallery">
     <h1>Gallery</h1>
     <p>Showcasing Our Recent Projects and Events</p>
     <div class="gallery-grid">
@@ -156,13 +156,14 @@
 
 
  <!-- Bod members section  -->
+  <section id="ourTeam">
  <h1 class="team-heading">Our Team</h1>
  <h2 class="subheading">Meet the talented individuals behind our success</h2>
  <div class="bod-container">
     <div class="buttons">
         <button onclick="showYear('latest')" >2081 Batch</button>
-        <button onclick="showYear('previous')" >Previous Year</button>
-        <button onclick="showYear('earliest')" >Earliest Year</button>
+        <button onclick="showYear('previous')" >2080 Batch</button>
+        <button onclick="showYear('earliest')" >2079 Batch</button>
     </div>
     
     <div id="bod-members" class="bod-members">
@@ -229,9 +230,10 @@
         </div>
     </div>
 </div>
+</section>
 <!-- end of bod member section -->
 
-<section class="contact-us">
+<section id="contact" class="contact-us">
     <div class="contact-header">
         <h1>Contact Us</h1>
         <h2>& let's make difference together !</h2>
