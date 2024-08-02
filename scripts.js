@@ -25,6 +25,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
   type();
 });
+//this code is for about us page :
+document.addEventListener('DOMContentLoaded', () => {
+  const textElements = document.querySelectorAll('.text');
+
+  if (textElements.length === 0) {
+      console.error('No .text elements found.');
+      return;
+  }
+
+  const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              // Add class to trigger the animation
+              entry.target.classList.add('show');
+          } else {
+              // Remove class when not in view
+              entry.target.classList.remove('show');
+          }
+      });
+  }, observerOptions);
+
+  textElements.forEach(text => observer.observe(text));
+});
+
 //this code is for gallery section.
 document.addEventListener('DOMContentLoaded', () => {
   const galleryItems = document.querySelectorAll('.gallery-item');

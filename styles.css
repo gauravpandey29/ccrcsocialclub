@@ -140,12 +140,37 @@ text-shadow: 2px 2px 4px rgb(226, 222, 222);    animation: moveShadow 8s infinit
 
 .image {
     margin-bottom: 5rem;
-    
+    z-index: 1; 
+    animation: glowingBorder 3.5s linear infinite;
 }
-
+@keyframes glowingBorder {
+    0% {
+        box-shadow: 0 0 1px rgba(192, 192, 192, 0.7), 
+                    0 0 2px rgba(192, 192, 192, 0.7), 
+                    0 0 3px rgba(192, 192, 192, 0.7), 
+                    0 0 4px rgba(192, 192, 192, 0.7);
+    }
+    50% {
+        box-shadow: 2px 2px 5px rgba(97, 154, 201, 0.7), 
+                    4px 4px 7px rgba(192, 192, 192, 0.7), 
+                    6px 6px 9px rgba(192, 192, 192, 0.7), 
+                    8px 8px 11px rgba(192, 192, 192, 0.7);
+    }
+    75% {
+        box-shadow: 5px 5px 10px rgba(99, 189, 238, 0.7), 
+                    5px 5px 10px rgba(192, 192, 192, 0.7), 
+                    5px 5px 10px rgba(192, 192, 192, 0.7), 
+                    5px 5px 10px rgba(192, 192, 192, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(192, 192, 192, 0.7), 
+                    0 0 5px rgba(192, 192, 192, 0.7), 
+                    0 0 5px rgba(192, 192, 192, 0.7), 
+                    0 0 5px rgba(192, 192, 192, 0.7);
+    }
+}
 .image img {
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(159, 184, 225, 0.963);
     width: 100%;
     max-width: 700px;
     height: 350px;
@@ -155,20 +180,37 @@ text-shadow: 2px 2px 4px rgb(226, 222, 222);    animation: moveShadow 8s infinit
 .text {
     max-width: 600px;
     font-family: Ubuntu ,sans-serif;
-    
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1.5s forwards;
 }
 
 .text h3 {
     font-size: 1.875rem;
     color: #4a5568;
     margin: 0 0 1rem 0;
+    animation-delay: 0.5s;
+
 }
 
 .text p {
     color: #718096;
     margin-bottom: 1.5rem;
+    animation-delay: 1s;
+
+}
+/* Animation State */
+.text.animate {
+    opacity: 1;
+    transform: translateX(0);
 }
 
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 @media (min-width: 768px) {
     .content {
         flex-direction: row;
