@@ -333,7 +333,7 @@ object-fit: cover;
     cursor: pointer;
 }
 /* more post button  */
-.more-posts-button {
+.shine {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -341,16 +341,44 @@ object-fit: cover;
     text-decoration: none;
     color: white;
     font-family: Ubuntu, sans-serif;
-    background-color: #616971; /* Blue color for the button */
-    border-radius: 5px; /* Slightly rounded corners */
+    background-color: #616971; /* Button color */
+    border-radius: 5px;
     border: 2px solid transparent;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    transition: all 0.3s ease;
+    overflow: hidden; /* Prevents overflow */
+    position: relative; /* For pseudo-element positioning */
 }
 
-.more-posts-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    border-color: #004085; /* Darker border color on hover */
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7); /* Glowing effect */
+.shine:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+}
+
+.shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%; /* Adjusted to cover the button */
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.403));
+    animation: shine 3s infinite linear;
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+.shine a {
+    position: relative;
+    z-index: 2; /* Ensure text is above the shining effect */
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) rotate(30deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(30deg);
+    }
 }
 #ourTeam{
     background-color: #e0e8f0e9;
