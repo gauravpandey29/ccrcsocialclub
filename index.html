@@ -9,11 +9,16 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">
+         <a href="#home">   <div class="logo">
                 <img src="img/logo.png" alt="CCRC Social Club Logo">
+            </div></a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
             <nav>
-                <ul>
+                <ul id="nav-menu">
                     <li><a href="#about-us">About Us</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#ourTeam">Our Team</a></li>
@@ -172,15 +177,15 @@
             <div class="member"><img src="img/1_bibek_thapa.jpg" alt="Member 3"><p>Vice-president:Bibek Thapa</p></div>
             <div class="member"><img src="img/1_niharika_sharma.jpg" alt="Member 4"><p>Co-ordinator:Niharika Sharma</p></div>
             <div class="member"><img src="img/1_sahara_panthi.jpg" alt="Member 5"><p>Secretary:Sahara Panthi</p></div>
-            <div class="member"><img src="img/1_dipasha_amatya.jpg" alt="Member 6"><p>Treasurer:Dipasha Amatya</p></div>
             <div class="member"><img src="img/1_puja_poudel.jpg" alt="Member 7"><p>Program Incharge:Puja Poudel</p></div>
+            <div class="member"><img src="img/1_dipasha_amatya.jpg" alt="Member 6"><p>Treasurer:Dipasha Amatya</p></div>
             <div class="member"><img src="img/1_gaurav_pandey.jpg" alt="Member 9"><p> Web Master: Gaurav Pandey</p></div>
             <div class="member"><img src="img/1_shristi_bhattarai.jpg" alt="Member 8"><p>Executive Head:Shristi Bhattarai</p></div>
             <div class="member"><img src="img/1_rahul_gupta.jpg" alt="Member 10"><p>IT head: Rahul Gupta</p></div>
             <div class="member"><img src="img/1_narayan_dhungana.jpg" alt="Member 11"><p>Marketing Head: Narayan Dhungana</p></div>
             <div class="member"><img src="img/1_aarati_chaudhary.jpg" alt="Member 12"><p>Communication Incharge:Aarati Chaudhary</p></div>
             <div class="member"><img src="img/1_arun_kunwar.jpg" alt="Member 13"><p>Fund Raising Director: Arun Kumar Dhami</p></div>
-            <!-- <div class="member"><img src="" alt=""><p></p></div> -->
+            <div class="member"><img src="img/1_anshu_pathak.jpg" alt=""><p>Membership Director:Anshu Pathak</p></div>
             <!-- <div class="member"><img src="" alt=""><p></p></div> -->
 
             
@@ -248,7 +253,7 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
 
-                <button type="submit">Submit</button>
+                <button type="submit" id="submitButton">Submit</button>
             </form>
         </div>
         <div class="contact-info">
